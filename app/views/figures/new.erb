@@ -8,6 +8,7 @@
   <p>
     Select an Existing Title
     <%@titles.each do |title| %>
+    <%=title.name %>
       <input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="title_<%=title.id%>"></input>
     <%end%>
   </p>
@@ -20,6 +21,7 @@
   <p>
     Select an Existing Landmark
     <%@landmarks.each do |landmark| %>
+      <%=landmark.name %>
       <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="landmark_<%=landmark.id%>"></input>
     <%end%>
   </p>
