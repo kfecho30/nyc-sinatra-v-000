@@ -11,9 +11,8 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    binding.pry
     @figure = Figure.create(params[:figure])
-
+binding.pry
     @figure.landmarks << Landmark.create(:name => params[:landmark][:name]) if !params[:landmark][:name].empty?
     @figure.titles << Title.create(:name => params[:title][:name]) if !params[:title][:name].empty?
 
