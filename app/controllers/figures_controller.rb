@@ -12,7 +12,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.create(:name => params[:figure][:name])
-    
+    Landmark.create(:name => params[:landmark][:name]) if !params[:landmark][:name].empty?
   end
 
   get '/figures/:id' do
