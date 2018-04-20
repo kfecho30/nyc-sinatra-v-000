@@ -16,9 +16,9 @@ class FiguresController < ApplicationController
     @figure.landmarks << Landmark.create(:name => params[:landmark][:name]) if !params[:landmark][:name].empty?
     @figure.titles << Title.create(:name => params[:title][:name]) if !params[:title][:name].empty?
 
-    params[:figure][:title_ids].each do |title|
-      @figure.titles << Title.find(title)
-    end
+    #params[:figure][:title_ids].each do |title|
+    #  @figure.titles << Title.find(title)
+    #end
 
     params[:figure][:landmark_ids].each do |landmark|
       @figure.landmarks << Landmark.find(landmark)
