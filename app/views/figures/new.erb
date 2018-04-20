@@ -4,11 +4,11 @@
     <label for="figure_name">Figure Name: </label>
     <input type="text" id="figure_name" name="figure[name]"/>
   </p>
-  <br><br>
+  <br/><br/>
   <p>
     Select an Existing Title
     <%@titles.each do |title| %>
-    <%=title.name %>
+      <%=title.name %>
       <input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="title_<%=title.id%>"></input>
       <br>
     <%end%>
