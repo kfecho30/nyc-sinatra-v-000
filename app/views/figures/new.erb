@@ -12,9 +12,15 @@
   </p>
   <br><br>
   <p>
+    Select an Existing Landmark
     <%@landmarks.each do |landmark| %>
     <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.name%>" id="landmark_<%=landmark.id%>"></input>
     <%end%>
+  </p>
+  <br><br>
+  <p>
+    Or, create a new one!
+    <input type="text" name="landmark[name]">
   </p>
 
 
