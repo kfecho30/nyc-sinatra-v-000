@@ -17,7 +17,7 @@ class FiguresController < ApplicationController
     @figure.titles << Title.create(:name => params[:title][:name]) if !params[:title][:name].empty?
 
     params[:figure][:title_ids].each do |title|
-      @figure.titles << Title.find_by(:name => title)
+      @figure.titles << Title.find(title)
     end
     binding.pry
     params[:figure][:landmark_ids].each do |landmark|
