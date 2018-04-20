@@ -20,9 +20,9 @@ class FiguresController < ApplicationController
     #  @figure.titles << Title.find(title)
     #end
 
-    params[:figure][:landmark_ids].each do |landmark|
-      @figure.landmarks << Landmark.find(landmark)
-    end
+    #params[:figure][:landmark_ids].each do |landmark|
+    #  @figure.landmarks << Landmark.find(landmark)
+    #end
 
 
     @figure.save
