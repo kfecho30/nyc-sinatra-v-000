@@ -20,6 +20,7 @@
   <p>
     Select an Existing Landmark
     <%@landmarks.each do |landmark| %>
+    binding.pry
       <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="landmark_<%=landmark.id%>"></input>
     <%end%>
   </p>
