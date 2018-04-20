@@ -6,9 +6,15 @@
   </p>
   <br><br>
   <p>
+    Select an Existing Title
     <%@titles.each do |title| %>
     <input type="checkbox" name="figure[title_ids][]" value="<%=title.name%>" id="title_<%=title.id%>"></input>
     <%end%>
+  </p>
+  <br><br>
+  <p>
+    Or, create a new one!
+    <input type="text" name="title[name]">
   </p>
   <br><br>
   <p>
