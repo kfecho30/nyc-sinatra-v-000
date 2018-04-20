@@ -20,7 +20,7 @@ class FiguresController < ApplicationController
       @figure.titles << Title.find_by(:name => title)
     end
     params[:figure][:landmark_ids].each do |landmark|
-      @figure.landmarks << Landmark.find_by(:name => title)
+      @figure.landmarks << Landmark.find_by(:name => landmark)
     end
     binding.pry
     @figure.save
