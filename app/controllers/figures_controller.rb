@@ -19,6 +19,7 @@ class FiguresController < ApplicationController
 
     params[:figure][:title_ids].each do |title|
       @figure.titles << Title.find(title)
+      @figure.save
     end
 
     params[:figure][:landmark_ids].each do |landmark|
