@@ -8,11 +8,11 @@
   <p>
     Select an Existing Title
     <%@titles.each do |title| %>
-    <%=binding.pry%>
     <%=title.name %>
       <input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="title_<%=title.id%>"></input>
       <br>
     <%end%>
+    <%=binding.pry%>
   </p>
   <br><br>
   <p>
