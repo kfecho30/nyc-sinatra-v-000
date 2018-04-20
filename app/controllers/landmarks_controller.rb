@@ -12,4 +12,8 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.create(params[:landmark])
     redirect_to '/landmarks/#{@landmark.id}'
   end
+
+  get '/landmarks/:id' do
+    erb :"/landmarks/show"
+  end
 end
