@@ -24,6 +24,7 @@ class FiguresController < ApplicationController
 
     params[:figure][:landmark_ids].each do |landmark|
       @figure.landmarks << Landmark.find(landmark)
+      @figure.save
     end
 
 
