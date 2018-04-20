@@ -19,7 +19,7 @@ class FiguresController < ApplicationController
     params[:figure][:title_ids].each do |title|
       @figure.titles << Title.find_by(:name =>title)
     end
-
+    binding.pry
     params[:figure][:landmark_ids].each do |landmark|
       @figure.landmarks << Landmark.find(landmark)
     end
